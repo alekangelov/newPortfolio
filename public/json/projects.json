@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "title": "PlasterBin",
+            "image": "/img/plasterbin.jpg",
+            "text": "Kind of like Pastebin, but simplified and way prettier. Front end/Back end completely separate from eachother with no framework on the front end, pure vanilla Javascript Microservice based API back end based on Slim Framework for PHP ",
+            "link": "http://plasterbin.alekangelov.com"
+        },
+        {
+            "title": "Filmotheque Of Macedonia",
+            "image": "/img/filmotheque.jpg",
+            "text": "Fully custom movie streaming platform with a clean back end, form validation and logic. Dynamic API driven backend fueled by PHP served on a fresh platter of OOP Javascript. Fully functional, secure user management system for API manipulation ",
+            "link": "http://filmotheque.maccinema.com"
+        },
+        {
+            "title": "Orion's Tab",
+            "image": "/img/orion.jpg",
+            "text": "New tab page that's all vanilla JS and local storage shenanigans.  NOTE: press SHIFT+B to prompt name input again ",
+            "link": "http://newtab.alekangelov.pw"
+        }
+    ]
+}

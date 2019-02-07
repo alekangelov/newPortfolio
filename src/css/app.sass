@@ -1,0 +1,502 @@
+$teal: #21D4FD
+$purple: #B721FF
+$black: #1E1E1E
+$white: #FDFDFD
+$blue: #628dff
+
+@import url('https://use.fontawesome.com/releases/v5.7.1/css/all.css');
+
+@font-face
+    font-family: Futura
+    src: url('../fonts/futura.ttf')
+    font-weight: normal
+
+@font-face
+    font-family: FuturaItalic
+    src: url('../fonts/tt0205m_.ttf')
+@font-face
+    font-family: FuturaCondensed
+    src: url('../fonts/Futura-Condensed-Extra-Bold.ttf')
+
+*
+    margin: 0
+    padding: 0
+
+body
+    background: $white
+
+
+.background
+    width: 100%
+    display: flex
+    position: fixed
+    z-index: -1
+    .bg-part
+        border-right: rgba($black, 0.1) 1px solid
+        display: block
+        width: calc(20% - 1px)
+        height: 100vh
+        &:last-child
+            width: calc(20%)
+
+#wrapper
+    bakground: $white
+    width: 100%
+    height: 100vh
+    display: flex
+    flex-direction: column
+.page
+    width: 80%
+    min-height: 100vh
+    margin: 0 auto
+
+.page-landing
+    display: grid
+    grid-template-areas: "text" "image"
+
+.page-about
+    max-height: 80vh
+    display: flex
+    padding-top: 10vh
+    box-sizing: border-box
+    video, img
+        width: auto
+        max-height: 80vh
+    .about-text
+        height: 80vh
+        background: $black
+        flex-grow: 1
+        color: $white
+        padding: 5%
+        box-sizing: border-box
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        align-content: center
+        justify-content: center
+        h1
+            font-family: "FuturaItalic"
+            text-transform: uppercase
+            letter-spacing: 0rem
+            display: inline-block
+            width: inherit
+            padding: 10px
+            background: -webkit-linear-gradient(-45deg, $purple, $teal);
+            filter: contrast(200%)
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        p
+            font-family: "Futura"
+            padding: 10px
+.landing-image
+    align-self: flex-end
+    width: 100%
+    margin: 0 auto
+    display: flex
+    background: url('/img/triangle.svg') no-repeat
+    background-position: center 99%
+    position: relative
+    overflow: hidden
+    grid-area: image
+    img
+        margin: 0 auto
+        align-self: flex-end
+        justify-self: center
+        width: 30%
+        height: auto
+        position: relative
+        filter: drop-shadow(0 20px 10px rgba($black, 0.25))
+
+.landing-text
+    font-family: "Futura"
+    text-transform: uppercase
+    grid-area: text
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    margin-top: 7rem
+    h1
+        font-family: "FuturaCondensed"
+        font-stretch: expanded
+        font-weight: bold
+        display: inline-block
+        justify-self: center
+        letter-spacing: 0.2rem
+        padding-top: 10px
+        font-size: 300%
+        background: -webkit-linear-gradient(45deg, $purple, $teal);
+        filter: contrast(150%)
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    h2
+        font-weight: 400
+        justify-self: center
+        display: inline-block
+        letter-spacing: -0.1rem
+
+.social-bar
+    position: fixed
+    left: 0
+    height: 100vh
+    margin: 0 40px
+    ul
+        list-style-type: none    
+        display: flex
+        flex-direction: column
+        align-content: center
+        align-items: center
+        height: 100vh
+        justify-content: center
+        li
+            margin: 20px 0
+            i
+                color: $black
+
+.footer
+    position: fixed
+    bottom: 10px
+    left: 50%
+    transform: translate(-50%, 0)
+    font-family: "Futura"
+    color: $black
+
+.scroll-indic
+    font-family: "Futura"
+    position: fixed
+    bottom: 40px
+    right: -60px
+    display: flex
+    align-content: center
+    justify-content: center
+    align-items: center
+    transform: rotate(90deg)
+    p
+    span
+        display: block
+        width: 50px
+        height: 1px
+        background: $black
+        margin-left: 10px
+
+navbar.white-bg
+    // background: rgba($white, 0.9)
+    // box-shadow: 0 20px 40px -20px rgba(black, 0.2)
+navbar
+    display: flex
+    margin: 0 auto
+    box-sizing: border-box
+    width: 100%
+    height: 60px
+    position: fixed
+    align-items: center
+    padding: 10px 4%
+    justify-content: space-between
+    z-index: 101
+    transition: 0.5s cubic-bezier(0, 0, 0, 1) background  600ms,  0.5s cubic-bezier(0, 0, 0, 1) box-shadow  600ms
+    .logo
+        img
+            filter: drop-shadow(0 5px 10px rgba($teal, 1))
+            height: 100%
+    .burger
+        height: 100%
+        display: flex
+        flex-direction: column
+        width: 40px
+        justify-content: center
+        align-items: flex-end 
+        cursor: pointer
+        span
+            display: block
+            width: 100%
+            background: $black
+            height: 15%
+            border-radius: 10px
+            transition: 0.2s cubic-bezier(0, 0, 0, 1) width, 0.2s cubic-bezier(0, 0, 0, 1) background 600ms
+            &:nth-child(2)
+                margin: 18.3% 0
+                width: 66%
+            &:nth-child(3)
+                width: 33%
+        &:hover span
+            width: 100% 
+        &:hover span:nth-child(1)
+            width: 66% 
+        &.open span
+            background: $white
+
+.menu
+    z-index: 100
+    height: 0%
+    transition: 1s cubic-bezier(0, 0, 0, 1) height 0.75s
+    ul
+        z-index: 1000
+        display: flex
+        flex-direction: row
+        position: fixed
+        width: 100%
+        height: 0vh
+        list-style-type: none
+        opacity: 0
+        transition: 0.25s cubic-bezier(0, 0, 0, 1) opacity
+        font-family: "FuturaItalic"
+        text-transform: uppercase
+        font-size: 300%
+        ul.submenu
+            list-style-type: none    
+            display: flex
+            flex-direction: column
+            align-content: center
+            align-items: center
+            height: 50vh
+            justify-content: center
+            width: 20%
+            li
+                a
+                    display: flex
+                    align-items: center
+                i
+                    font-size: 25%
+                    color: $white
+        li
+            width: 20%
+            height: 100vh
+            color: white
+            display: flex
+            align-content: center
+            align-items: center
+            justify-content: center
+            justify-items: center
+            transition: 0.2s cubic-bezier(0, 0, 0, 1) background
+            a
+                color: $white
+                text-decoration: none
+            &:hover
+                background: $blue
+    .background
+        height: 0vh
+        width: 100%
+        display: flex
+        position: fixed
+        .bg-part
+            background: $black
+            border-right: 1px solid #303030
+            display: block
+            width: calc(20% - 1px)
+            height: 0vh
+            transition: 0.5s cubic-bezier(0, 0, 0, 1)
+            &:last-child
+                border-right: none
+                width: calc(20%)
+            @for $i from 1 through 5 
+                &:nth-child(#{$i})
+                    $time: $i * 100
+                    transition-delay: #{$time}ms
+    &.open
+        .background
+            height: 100vh
+            .bg-part
+                height: 100vh
+    &.open.menu-show
+        ul
+            height: 100vh
+            opacity: 1
+            transition: 0.25s cubic-bezier(0, 0, 0, 1) opacity 1s
+
+.project
+    height: calc(100vh / 2)
+    background-size: cover
+    background-repeat: no-repeat
+    display: flex
+    align-content: center
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    font-family: "Futura"
+    background-color: $white
+    transition: 0.5s cubic-bezier(0, 0, 0, 1) background-position
+    position: relative
+    overflow: hidden
+    box-shadow: 0 0 40px rgba($black, 0.2)
+    &:nth-child(even)
+        h1
+            background: $purple
+        p
+            background: $purple
+    &:nth-child(odd)
+        h1
+            background: $blue
+        p
+            background: $blue
+    &:hover img
+        transform: translate(0, -50%) scale(1.2)
+    &:hover a
+        opacity: 1
+    &:hover a:after
+        width: 100%
+        height: 100%
+    &:hover a:before
+        width: 100vw
+    h1
+        color: white
+        padding: 20px
+        z-index: 1
+        display: block
+    p
+        display: block
+        max-width: 768px
+        padding: 20px
+        color: white
+        z-index: 1
+    img
+        position: absolute
+        width: 100vw
+        top: 50%
+        transform: translate(0, -50%)
+        left: 0
+        transition: 0.5s cubic-bezier(0, 0, 0, 1) transform
+    a
+        display: block
+        color: black
+        position: relative
+        padding: 20px
+        align-self: flex-end
+        justify-self: bottom
+        z-index: 1
+        font-family: "FuturaItalic"
+        text-decoration: none
+        text-transform: uppercase
+        opacity: 1
+        font-size: 300%
+        &:before
+            z-index: -1
+            content: " "
+            position: absolute
+            transition:  1s cubic-bezier(0, 0, 0, 1) width
+            width: 0%
+            height: 10px
+            background: white
+            top: -1px
+            right: 0
+        &:after
+            z-index: -1
+            content: " "
+            position: absolute
+            transition:  0.3s cubic-bezier(0, 0, 0, 1) width 0.2s, 0.2s cubic-bezier(0, 0, 0, 1) height
+            width: 1%
+            height: 0%
+            background: white
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+@media only screen and (max-width: 768px)
+    .social-bar
+        display: none
+    .page
+        max-width: 100%
+        height: 100vh
+    .page-landing
+        grid-template-rows: 1fr 5fr
+        .landing-text
+            padding: 0
+            margin: 10vh 0 0 0
+            box-sizing: border-box
+        .landing-image
+            height: 100%
+            img
+                width: 100%
+    .menu
+        ul
+            flex-direction: column
+            width: 0%
+            li
+                width: 100%
+                font-size: 100%
+            ul.submenu
+                flex-direction: row
+                height: 20vh
+                width: 100%
+                li
+                    width: 20%
+                    height: 20vh
+                    margin: 0
+                    padding: 0
+                    i
+                        font-size: 15%
+        .background
+            width: 0%
+            height: 100vh
+            display: flex
+            position: fixed
+            flex-direction: column
+            // -webkit-transition: width 0s 1s
+            transition: width 0s 1s
+            .bg-part
+                background: $black
+                border: none
+                border-bottom: 1px solid #303030
+                display: block
+                width: 0%
+                height: calc(20vh - 1px)
+                transition: 0.5s cubic-bezier(0, 0, 0, 1)
+                &:last-child
+                    border-right: none
+                    height: 20vh
+                    width: 0%
+                @for $i from 1 through 5 
+                    &:nth-child(#{$i})
+                        $time: $i * 100
+                        transition-delay: #{$time}ms
+        &.open
+            .background
+                width: 100%
+                // -webkit-transition: width 0s
+                transition: width 0s
+                .bg-part
+                    height: 20vh
+                    width: 100%
+        &.open.menu-show
+            ul
+                width: 100%
+    .background
+        width: 100%
+        display: flex
+        position: fixed
+        flex-direction: column
+        z-index: -1
+        .bg-part
+            border-bottom: rgba($black, 0.1) 1px solid
+            display: block
+            width: 100%
+            height: calc(20vh - 1px)
+            &:last-child
+                width: 100%
+    .project
+        height: 100vh
+        img
+            height: 100vh
+            width: auto
+        p
+            text-align: justify
+        a
+            width: 100%
+            box-sizing: border-box
+            text-align: center
+        a:after
+            width: 100%
+            height: 100%
+    .page-about, .page-contact
+        display: flex
+        flex-direction: column
+        padding-top: 75px
+        max-height: none
+        .about-text
+            min-height: min-content
+        video
+            width: 100%
+            height: auto
+        img
+            width: 100%
+            height: auto
+    .footer
+        display: none

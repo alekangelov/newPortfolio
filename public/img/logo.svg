@@ -1,0 +1,14 @@
+
+<svg width="30px" height="34px" viewBox="0 0 30 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="68.424198%" y1="100%" x2="32.0800547%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#21D4FD" offset="0%"></stop>
+            <stop stop-color="#B721FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-30.000000, -36.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M50.324691,39.7940733 L58.1030648,55.5800403 C60.5441412,60.5341285 58.5069425,66.529094 53.5528542,68.9701703 C52.1779296,69.6476504 50.6656688,70 49.1328945,70 L40.7171365,70 C35.194289,70 30.7171365,65.5228475 30.7171365,60 C30.7171365,58.461179 31.0722707,56.9431171 31.7548935,55.5639883 L39.565243,39.7844422 C41.0352079,36.8146161 44.6343697,35.5987384 47.6041958,37.0687034 C48.7858391,37.6535774 49.7419333,38.6113848 50.324691,39.7940733 Z" id="Rectangle"></path>
+        </g>
+    </g>
+</svg>
