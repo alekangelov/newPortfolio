@@ -259,14 +259,14 @@ navbar
                     color: $white
         li
             width: 20%
-            height: 100vh
+            height: 0vh
             color: white
             display: flex
             align-content: center
             align-items: center
             justify-content: center
             justify-items: center
-            transition: 0.2s cubic-bezier(0, 0, 0, 1) background
+            transition: 0.2s cubic-bezier(0, 0, 0, 1) background, 0s cubic-bezier(0, 0, 0, 1) height 1s
             a
                 color: $white
                 text-decoration: none
@@ -301,6 +301,8 @@ navbar
             height: 100vh
             opacity: 1
             transition: 0.25s cubic-bezier(0, 0, 0, 1) opacity 1s
+            li
+                height: 100vh
 
 .project
     height: calc(100vh / 2)
@@ -458,6 +460,11 @@ navbar
         &.open.menu-show
             ul
                 width: 100%
+            ul.submenu
+                height: 20vh
+                li
+                    height: 20vh
+            
     .background
         width: 100%
         display: flex
